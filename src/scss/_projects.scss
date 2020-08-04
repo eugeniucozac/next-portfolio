@@ -1,0 +1,124 @@
+#projects {
+  @include watermark();
+  position: relative;
+  padding-top: 2rem;
+  min-height: 10rem;
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+    padding-bottom: 5rem;
+  }
+  h2 {
+    text-align: center;
+  }
+  #u-slider {
+    padding-bottom: 10rem;
+    margin-top: 3rem;
+    @include media-breakpoint-down(md) {
+      margin-top: 1rem;
+      padding-bottom: 2rem;
+    }
+    .slider-single-content img {
+      display: block;
+      align-self: flex-start;
+    }
+    .slider-right {
+      left: 102%;
+      div {
+        @include media-breakpoint-down(sm) {
+          top: 65%;
+        }
+      }
+    }
+    .slider-left {
+      right: 102%;
+      div {
+        @include media-breakpoint-down(sm) {
+          top: 65%;
+        }
+      }
+    }
+    .col-md-8 {
+      img {
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 0.7s;
+      }
+    }
+    .slider-frame {
+      overflow: visible !important;
+    }
+    @keyframes fadeInOpacity {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  .row {
+    position: relative;
+    .nav {
+      a {
+        padding: 0.1rem 0.2rem;
+        font-family: $gothamMedium;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover,
+        &.active {
+          color: $yellow;
+          text-decoration: underline;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 1rem;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .capture {
+    color: $yellow;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    text-align: center;
+    bottom: -7rem;
+    h4 {
+      color: #fff;
+      font-family: $gothamBold;
+      margin: 0.5rem 0 !important;
+      font-size: 1.3rem;
+    }
+    a,
+    h6 {
+      color: $yellow;
+      font-size: 0.7rem;
+      font-family: $gothamBook;
+      &.view {
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid $yellow;
+      }
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+  .active .capture {
+    display: block;
+  }
+  .col-md-8 {
+    .capture {
+      display: block;
+      margin: 3rem 0;
+      text-align: center;
+      @include media-breakpoint-down(md) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

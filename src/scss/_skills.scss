@@ -1,0 +1,39 @@
+#skills {
+  @include watermark();
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 3rem 0;
+  background: $lightblack;
+  color: $white;
+  min-height: 5rem;
+  h2 {
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+      margin-top: 1rem;
+    }
+  }
+  .desktop-p {
+    margin-top: 3rem;
+  }
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+    padding: 2rem 0 0 0;
+  }
+  .progress-block {
+    margin-bottom: 1.5rem;
+    &:last-of-type {
+      margin-bottom: 0;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .progress {
+      border-radius: 0;
+      height: 0.4rem;
+      margin-top: 1rem;
+      .progress-bar {
+        background: $yellow;
+      }
+    }
+  }
+}

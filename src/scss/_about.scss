@@ -1,0 +1,69 @@
+#about {
+  padding-top: 5rem;
+  min-height: 15rem;
+  img {
+    width: 100%;
+  }
+  @include media-breakpoint-down(lg) {
+    padding-top: 2rem;
+    min-height: auto;
+  }
+  @include media-breakpoint-down(sm) {
+    .card-img {
+      margin-bottom: 2rem;
+    }
+  }
+  .avatar {
+    width: 110%;
+  }
+  .jumbotron {
+    background: transparent;
+    color: $white;
+    padding-top: 2rem;
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
+    .signature {
+      width: 15rem;
+      height: auto;
+      display: block;
+
+      margin: 1rem 0;
+      @include media-breakpoint-down(md) {
+        width: 75%;
+        margin-top: -0.5rem !important;
+      }
+    }
+    .btn-primary {
+      @include button("none");
+      margin-top: 0.5rem;
+      &.black {
+        @include button("black");
+        margin-top: 0.5rem;
+        @include media-breakpoint-down(sm) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .col-md-3 {
+    padding-top: 1.5rem;
+  }
+  .skill {
+    background: #1d212c;
+    text-align: center;
+    padding: 1rem 0;
+    img {
+      width: 30%;
+    }
+    h6 {
+      margin: 0.25rem 0 0 0;
+      color: $white;
+      font-weight: 400;
+      font-size: 0.75rem;
+    }
+  }
+}

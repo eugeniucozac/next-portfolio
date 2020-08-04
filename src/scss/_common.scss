@@ -1,0 +1,86 @@
+body {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  .btn {
+    @include media-breakpoint-down(md) {
+    }
+  }
+  section {
+    .container {
+      & > p {
+        text-align: center;
+        padding: 0 29%;
+        @include media-breakpoint-down(md) {
+          padding: 0 3%;
+        }
+      }
+    }
+  }
+  background-color: $grayblack;
+  font-size: 1rem;
+  .desktop-p {
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .card-body {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+  }
+  a,
+  a:hover {
+    color: $yellow;
+  }
+  p {
+    font-family: $gothamBook;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    color: $white;
+  }
+  h2 {
+    font-family: $gothamBold;
+    color: $yellow;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    &::after {
+      content: "____";
+      margin-bottom: 0.2rem;
+      position: absolute;
+      bottom: 0.25rem;
+      font-size: 1rem;
+      margin-left: 1rem;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+}
+
+.alert-danger {
+  border-radius: 0;
+  color: $white;
+  background: $red;
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+a[href^="tel"] {
+  color: red;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+}
