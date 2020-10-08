@@ -19,7 +19,7 @@
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
     "lint-staged": "^10.2.11",
-    "next": "^9.4.4",
+    "next": "^9.5.4",
     "nuka-carousel": "^4.7.0",
     "prettier": "^2.0.5",
     "prismic-javascript": "^3.0.0",
